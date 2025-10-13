@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd43c160-cd22-44ff-b529-804725935281" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Project_1_.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project_1_2/LibrairieLectureFichierQCM/QCM_main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project_1_2/PRNG_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project_1_2/prng_final.py" afterDir="false" />
+    <list default="true" id="bd43c160-cd22-44ff-b529-804725935281" name="Changes" comment="Model 1 QCM">
+      <change afterPath="$PROJECT_DIR$/Project_1_2/LibrairieLectureFichierQCM/QCM_test.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_1_2/PRNG_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project_1_2/PRNG_test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,12 +18,25 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="Jupyter Notebook" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Berre477"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Berre477/Project_1_.git",
+    "accountId": "765b0228-b17b-4641-8707-f99fe4b6e600"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -40,24 +48,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.PRNG_test.executor": "Run",
-    "Python.QCM_main.executor": "Run",
-    "Python.exemple.executor": "Run",
-    "Python.prng_final.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.PRNG_test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.QCM_main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.exemple.executor&quot;: &quot;Run&quot;,
+    &quot;Python.prng_final.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Project_1_2" />
@@ -96,8 +104,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-PY-251.26927.90" />
-        <option value="bundled-python-sdk-41e8cd69c857-64d779b69b7a-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.26927.90" />
+        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-PY-251.28774.16" />
+        <option value="bundled-python-sdk-14d54ed193d7-64d779b69b7a-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.28774.16" />
       </set>
     </attachedChunks>
   </component>
@@ -114,16 +122,64 @@
       <workItem from="1759904872618" duration="331000" />
       <workItem from="1760094171772" duration="196000" />
       <workItem from="1760104697499" duration="1369000" />
+      <workItem from="1760106762450" duration="94000" />
+      <workItem from="1760117509944" duration="1808000" />
+      <workItem from="1760185304574" duration="9644000" />
+      <workItem from="1760291105918" duration="4000" />
+      <workItem from="1760300158278" duration="8670000" />
+      <workItem from="1760355646302" duration="414000" />
+      <workItem from="1760356127208" duration="1772000" />
     </task>
+    <task id="LOCAL-00001" summary="Added some extra features">
+      <option name="closed" value="true" />
+      <created>1760106798819</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1760106798819</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Model 1 QCM">
+      <option name="closed" value="true" />
+      <created>1760357145978</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1760357145978</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Model 1 QCM">
+      <option name="closed" value="true" />
+      <created>1760357245825</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1760357245825</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added some extra features" />
+    <MESSAGE value="Model 1 QCM" />
+    <option name="LAST_COMMIT_MESSAGE" value="Model 1 QCM" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Project_1_$QCM_main.coverage" NAME="QCM_main Coverage Results" MODIFIED="1760105681151" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project_1_2/LibrairieLectureFichierQCM" />
+    <SUITE FILE_PATH="coverage/Project_1_$QCM_main.coverage" NAME="QCM_main Coverage Results" MODIFIED="1760356923347" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project_1_2/LibrairieLectureFichierQCM" />
     <SUITE FILE_PATH="coverage/Project_1_$prng_final.coverage" NAME="prng_final Coverage Results" MODIFIED="1759751613040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project_1_2" />
     <SUITE FILE_PATH="coverage/Project_1_$PRNG_test.coverage" NAME="PRNG_test Coverage Results" MODIFIED="1760094185212" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project_1_2" />
-    <SUITE FILE_PATH="coverage/Project_1_$exemple.coverage" NAME="exemple Coverage Results" MODIFIED="1760094178849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project_1_2/LibrairieLectureFichierQCM" />
+    <SUITE FILE_PATH="coverage/Project_1_$exemple.coverage" NAME="exemple Coverage Results" MODIFIED="1760117523135" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project_1_2/LibrairieLectureFichierQCM" />
   </component>
 </project>

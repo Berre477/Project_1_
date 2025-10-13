@@ -4,15 +4,7 @@ list_of_numbers=[x for x in range(10)]
 
 
 
-#Random number generator
-import random
-intervall=[x for x in range(1,11)]
-i=0
-new_list=[]
-for i in range(100000):
-    random.shuffle(intervall)
-    num_1=intervall[0]
-    new_list.append(num_1)
+
 
 
 def ecart_type(list_of_numbers):
