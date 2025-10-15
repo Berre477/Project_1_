@@ -15,7 +15,7 @@ for y in questions_2:
 
 #Pseudo random number generator
 def PRNG(intervall):
-    intervall_list=[x for x in range(0,intervall)]
+    intervall_list=[x for x in range(0,intervall)]# liste des interval
     number=rd.choice(intervall_list)
     return number
 
@@ -25,8 +25,9 @@ number_to_letter={}
 for i,j in zip(uppercase_alpha,[x for x in range(10)]):
     letter_to_number[i]=str(j)
     number_to_letter[str(j)]=i
-translate_number_to_letter=str.maketrans(number_to_letter)
-translate_letter_to_number=str.maketrans(letter_to_number)
+
+translate_number_to_letter=str.maketrans(number_to_letter)#Traduit un nombre de entre 0 et 9 en sa lettre équivalent
+translate_letter_to_number=str.maketrans(letter_to_number)#Traduit une lettre en son nombre équivalent
 
 def QCM(questions: list):
     right_answers=0
@@ -53,68 +54,71 @@ def QCM(questions: list):
             else:
                 print("S'il vous plait choisissez A ou B")
 
+    #boucle sur toute les questions
     for i in range(len(questions)):
         question_num = PRNG(len(questions))# donne un nombre aléatoire dans un intervall question
-        question = questions[question_num]
-        answers=question[1]
+        question = questions[question_num]#Prend une question de la liste
+        answers=question[1]#Prend tout les réponses a la question
         random_answers=[]
-        while answers:
+        while answers:#Tounre jusqu'a answers est vide
             answer_num=PRNG(len(answers))
             ans=answers[answer_num]
-            answers.remove(ans)
-            random_answers.append(ans)
+            answers.remove(ans)#enleve une réponse dans la liste
+            random_answers.append(ans)#Met les question de maniere aleatoire dans la liste grace au PRNG
 
         answer_list={}
         tried=True
-
         while tried:
             try:
                 letters=[]
                 print(f"Q:{question[0]}")  # imprime la question
                 #Affiche les options de réponse
                 for y in range(len(random_answers)):
-                    answer_list[y]=random_answers[y][1]
+                    answer_list[y]=random_answers[y][1]#Ajoute le nombre + bool
                     i=str(y).translate(translate_number_to_letter)#Transforme un nombre en sa lettre adjacent
                     print(f"{i} : {random_answers[y][0]}")
                     letters.append(i)
 
-
-
                 answer = input(f"answer : ").upper()
                 answer =list(answer)
-
+                #Enlever les choses inutiles dans answer
                 for t in answer:
                     if t in[' ',"," ]:
                         answer.remove(t)
 
                 answer_to_number=[]
                 #Transforme toute les lettres en leur nombre adjacent
-                for letter in answer:#
+                for letter in answer:
                     z=letter.translate(translate_letter_to_number)
-                    answer_to_number.append(int(z))
+                    answer_to_number.append(int(z))#Tout les réponse en nombre
 
 
                 Good_answers={}
                 Bad_answers={}
-
+                #Trie les bonne et mauvaise réponse
                 for i in range(len(answer_list)):
-                    if answer_list[i] :
-                        Good_answers[i] = answer_list[i]
+                    if answer_list[i] :#Verifie si la reponse est bonne
+                        Good_answers[i] = answer_list[i]#Ajoute l'index plus la valeur boolean Vrai
+
                     else:
-                        Bad_answers[i] = answer_list[i]
+                        Bad_answers[i] = answer_list[i]#Ajoute l'index plus la valeur boolean Fausse
+
 
                 for answer in answer_to_number:
+                    #Verifie que la réponse est bien dans les bonne réponse et mauvaise réponse
                     if answer not in list(Good_answers.keys()) + list(Bad_answers.keys()):
                         print("S'il vous plaît, choisissez une des lettres affichées")
                         break
                     else:
-
+                        #Verifie que toute les bonne réponse sont la
                         if all(ans in list(Good_answers.keys()) for ans in answer_to_number):
                             print("\nBonne réponse :)\n")
                             tried=False
                             right_answers += 1
                             questions.remove(questions[question_num])
                             break
+
+                        #Verifie si il y aune mauvaise réponse
                         elif any(ans in list(Bad_answers.keys()) for ans in answer_to_number):
                             print("\nMauvaise réponse :(\n")
                             tried = False
@@ -133,7 +137,9 @@ def QCM(questions: list):
             print("Résultat leger: "+light_quoting)
         else:
             print("Résultat severe: "+severe_quoting)
+
     else:#comparatif
+
         print(f"Résultat leger: {light_quoting}  \t Résultat severe: {severe_quoting}")
 
-print(questions_1)
+QCM(full_question)
