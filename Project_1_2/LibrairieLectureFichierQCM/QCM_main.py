@@ -4,7 +4,7 @@ import random as rd
 
 #Put the questions together
 
-
+#
 def add_questions_together(q1,q2):
     return q1+q2
 
