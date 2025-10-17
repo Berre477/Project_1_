@@ -1,35 +1,37 @@
-import qcm
+from qcm import build_questionnaire
 import string
 import random as rd
-filename = "QCM.txt"
-filename_2="QCM2.txt"
-questions_1 = qcm.build_questionnaire(filename)
-questions_2=qcm.build_questionnaire(filename_2)
 
 #Put the questions together
-full_question=[]
-for x in questions_1:
-    full_question.append(x)
-for y in questions_2:
-    full_question.append(y)
+
+
+def add_questions_together(q1,q2):
+    return q1+q2
 
 #Pseudo random number generator
-def PRNG(intervall):
+def PRNG(intervall:int):
     intervall_list=[x for x in range(0,intervall)]# liste des interval
     number=rd.choice(intervall_list)
     return number
 
-uppercase_alpha=string.ascii_uppercase
-letter_to_number={}
-number_to_letter={}
-for i,j in zip(uppercase_alpha,[x for x in range(10)]):
-    letter_to_number[i]=str(j)
-    number_to_letter[str(j)]=i
+def translater():
 
-translate_number_to_letter=str.maketrans(number_to_letter)#Traduit un nombre de entre 0 et 9 en sa lettre équivalent
-translate_letter_to_number=str.maketrans(letter_to_number)#Traduit une lettre en son nombre équivalent
+    uppercase_alpha=string.ascii_uppercase
+    letter_to_number={}
+    number_to_letter={}
+    for i,j in zip(uppercase_alpha,[x for x in range(10)]):
+        letter_to_number[i]=str(j)
+        number_to_letter[str(j)]=i
+    translate_number_to_letter = str.maketrans(number_to_letter)  # Traduit un nombre de entre 0 et 9 en sa lettre équivalent
+    translate_letter_to_number = str.maketrans(letter_to_number)  # Traduit une lettre en son nombre équivalent
+
+    return translate_number_to_letter,translate_letter_to_number
+
+
 
 def QCM(questions: list):
+    translate_number_to_letter=translater()[0]
+    translate_letter_to_number=translater()[1]
     right_answers=0
     wrong_answers=0
     over=len(questions)
@@ -142,4 +144,13 @@ def QCM(questions: list):
 
         print(f"Résultat leger: {light_quoting}  \t Résultat severe: {severe_quoting}")
 
+
+
+filename = "QCM.txt"
+filename_2="QCM2.txt"
+
+question_1=build_questionnaire(filename)
+question_2=build_questionnaire(filename_2)
+
+full_question=add_questions_together(question_1,question_2)
 QCM(full_question)
