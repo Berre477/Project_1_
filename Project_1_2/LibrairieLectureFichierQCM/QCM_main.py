@@ -4,7 +4,6 @@ import random as rd
 
 #Put the questions together
 
-#
 def add_questions_together(q1,q2):
     return q1+q2
 
@@ -56,19 +55,22 @@ def QCM(questions: list):
             else:
                 print("S'il vous plait choisissez A ou B")
 
-    #boucle sur toute les questions
+    #Choisis la question
+
     for i in range(len(questions)):
         question_num = PRNG(len(questions))# donne un nombre aléatoire dans un intervall question
         question = questions[question_num]#Prend une question de la liste
         answers=question[1]#Prend tout les réponses a la question
         random_answers=[]
-        while answers:#Tounre jusqu'a answers est vide
+
+        while answers:#Tourne jusqu'a answers est vide
             answer_num=PRNG(len(answers))
             ans=answers[answer_num]
             answers.remove(ans)#enleve une réponse dans la liste
             random_answers.append(ans)#Met les question de maniere aleatoire dans la liste grace au PRNG
 
-        answer_list={}
+
+        answer_list={}#Pour stocké un nombre(index) + la valeur boolean
         tried=True
         while tried:
             try:
@@ -76,10 +78,11 @@ def QCM(questions: list):
                 print(f"Q:{question[0]}")  # imprime la question
                 #Affiche les options de réponse
                 for y in range(len(random_answers)):
-                    answer_list[y]=random_answers[y][1]#Ajoute le nombre + bool
+                    answer_list[y]=random_answers[y][1:]#Ajoute un nombre(index) + bool
                     i=str(y).translate(translate_number_to_letter)#Transforme un nombre en sa lettre adjacent
                     print(f"{i} : {random_answers[y][0]}")
                     letters.append(i)
+
 
                 answer = input(f"answer : ").upper()
                 answer =list(answer)
@@ -95,16 +98,17 @@ def QCM(questions: list):
                     answer_to_number.append(int(z))#Tout les réponse en nombre
 
 
+
                 Good_answers={}
                 Bad_answers={}
                 #Trie les bonne et mauvaise réponse
                 for i in range(len(answer_list)):
-                    if answer_list[i] :#Verifie si la reponse est bonne
+                    if answer_list[i][0] :#Verifie si la reponse est bonne
                         Good_answers[i] = answer_list[i]#Ajoute l'index plus la valeur boolean Vrai
+
 
                     else:
                         Bad_answers[i] = answer_list[i]#Ajoute l'index plus la valeur boolean Fausse
-
 
                 for answer in answer_to_number:
                     #Verifie que la réponse est bien dans les bonne réponse et mauvaise réponse
@@ -112,18 +116,24 @@ def QCM(questions: list):
                         print("S'il vous plaît, choisissez une des lettres affichées")
                         break
                     else:
-                        #Verifie que toute les bonne réponse sont la
-                        if all(ans in list(Good_answers.keys()) for ans in answer_to_number):
+                    #Verifie que toute les bonne réponse sont la
+                        if list(Good_answers.keys()) == answer_to_number:
                             print("\nBonne réponse :)\n")
+
                             tried=False
                             right_answers += 1
                             questions.remove(questions[question_num])
                             break
 
                         #Verifie si il y aune mauvaise réponse
-                        elif any(ans in list(Bad_answers.keys()) for ans in answer_to_number):
+                        else :#any(ans in list(Bad_answers.keys()) for ans in answer_to_number):
+
                             print("\nMauvaise réponse :(\n")
+                            for x in Bad_answers.values():
+                                if x[1] != '':
+                                    print(x[1])
                             tried = False
+
                             wrong_answers += 1
                             questions.remove(questions[question_num])
                             break
