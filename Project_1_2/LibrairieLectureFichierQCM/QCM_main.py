@@ -35,7 +35,7 @@ def translater():
 
 def QCM(questions: list):
     """""
-    pre :l'argument question est une liste de
+    pre :l'argument question est une liste nested et dans  chaque liste nested il y a une question,une valeur booléene et un feedback vide ou non
 
     """
     translate_number_to_letter=translater()[0]
