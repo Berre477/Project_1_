@@ -35,7 +35,7 @@ def translater():
 
 def QCM(questions: list):
     """""
-    pre :
+    pre :l'argument question est une liste de
 
     """
     translate_number_to_letter=translater()[0]
