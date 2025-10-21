@@ -3,12 +3,17 @@ import string
 import random as rd
 
 #Put the questions together
-
 def add_questions_together(q1,q2):
+
     return q1+q2
 
 #Pseudo random number generator
-def PRNG(intervall:int):
+def PRNG(intervall):
+    """"
+    pre: intervall est un argument qui prend un nombre int
+
+    post : retourne un nombre aléatoire entre 0 et l'intervall
+    """
     intervall_list=[x for x in range(0,intervall)]# liste des interval
     number=rd.choice(intervall_list)
     return number
@@ -131,7 +136,7 @@ def QCM(questions: list):
                             print("\nMauvaise réponse :(\n")
                             for x in Bad_answers.values():
                                 if x[1] != '':
-                                    print(x[1])
+                                    print(f'{x[1] }\n')
                             tried = False
 
                             wrong_answers += 1
