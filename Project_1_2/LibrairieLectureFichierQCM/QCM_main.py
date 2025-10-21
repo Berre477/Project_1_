@@ -4,7 +4,15 @@ import random as rd
 
 #Put the questions together
 def add_questions_together(q1,q2):
+    """""
+    pre : q1 est une liste contenant plusieurs autre liste avec question,bool et feedback
+          q2 est une liste contenant plusieurs autre liste avec question , bool et feedback
 
+    post : retourne une nouvelle listes contenant les éléments de q1 et q2
+
+
+
+    """
     return q1+q2
 
 #Pseudo random number generator
@@ -19,6 +27,12 @@ def PRNG(intervall):
     return number
 
 def translater():
+    """
+    post : retourne un tuple contenant 2 dictionaire translate_number_to_letter et translate_letter_to_number
+    - translate_number_to_letter : dictionaire de nombre 0 a 9 prenant comme valeur leur lettres equivalent de A a J
+    - translate_letter_to_number : dictionaire de lettre de A a J prenant comme valeur leur nombre equivalent 0 a 9
+
+    """
 
     uppercase_alpha=string.ascii_uppercase
     letter_to_number={}
@@ -69,17 +83,16 @@ def QCM(questions: list):
     for i in range(len(questions)):
         question_num = PRNG(len(questions))# donne un nombre aléatoire dans un intervall question
         question = questions[question_num]#Prend une question de la liste
-        answers=question[1]#Prend tout les réponses a la question
+        answers_to_question=question[1]#Prend tout les réponses a la question
         random_answers=[]
 
-        while answers:#Tourne jusqu'a answers est vide
-            answer_num=PRNG(len(answers))
-            ans=answers[answer_num]
-            answers.remove(ans)#enleve une réponse dans la liste
+        while answers_to_question:#Tourne jusqu'a answers est vide
+            answer_num=PRNG(len(answers_to_question))
+            ans=answers_to_question[answer_num]
+            answers_to_question.remove(ans)#enleve une réponse dans la liste
             random_answers.append(ans)#Met les question de maniere aleatoire dans la liste grace au PRNG
 
-
-        answer_list={}#Pour stocké un nombre(index) + la valeur boolean
+        answer_in_dict={}#Pour stocké un nombre(index) + la valeur boolean
         tried=True
         while tried:
             try:
@@ -87,11 +100,10 @@ def QCM(questions: list):
                 print(f"Q:{question[0]}")  # imprime la question
                 #Affiche les options de réponse
                 for y in range(len(random_answers)):
-                    answer_list[y]=random_answers[y][1:]#Ajoute un nombre(index) + bool
+                    answer_in_dict[y]=random_answers[y][1:]#Ajoute un nombre(index) + bool
                     i=str(y).translate(translate_number_to_letter)#Transforme un nombre en sa lettre adjacent
                     print(f"{i} : {random_answers[y][0]}")
                     letters.append(i)
-
 
                 answer = input(f"answer : ").upper()
                 answer =list(answer)
@@ -106,18 +118,16 @@ def QCM(questions: list):
                     z=letter.translate(translate_letter_to_number)
                     answer_to_number.append(int(z))#Tout les réponse en nombre
 
-
-
                 Good_answers={}
                 Bad_answers={}
                 #Trie les bonne et mauvaise réponse
-                for i in range(len(answer_list)):
-                    if answer_list[i][0] :#Verifie si la reponse est bonne
-                        Good_answers[i] = answer_list[i]#Ajoute l'index plus la valeur boolean Vrai
+                for i in range(len(answer_in_dict)):
+                    if answer_in_dict[i][0] :#Verifie si la reponse est bonne
+                        Good_answers[i] = answer_in_dict[i]#Ajoute l'index plus la valeur boolean Vrai
 
 
                     else:
-                        Bad_answers[i] = answer_list[i]#Ajoute l'index plus la valeur boolean Fausse
+                        Bad_answers[i] = answer_in_dict[i]#Ajoute l'index plus la valeur boolean Fausse
 
                 for answer in answer_to_number:
                     #Verifie que la réponse est bien dans les bonne réponse et mauvaise réponse
@@ -150,8 +160,8 @@ def QCM(questions: list):
             except ValueError:
                 print("S'il vous plait choisiser une des lettre afficher")
 
-    light_quoting=f"{right_answers}/{number_of_questions}"
-    severe_quoting=f"{right_answers-wrong_answers}/{number_of_questions}"
+    light_quoting=f"{right_answers}/{number_of_questions}"#cotation légère
+    severe_quoting=f"{right_answers-wrong_answers}/{number_of_questions}"#cotation sévère
 
     if presentation_value:#Evaluation
         if quoting_value:
