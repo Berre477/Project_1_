@@ -42,7 +42,7 @@ def QCM(questions: list):
     translate_letter_to_number=translater()[1]
     right_answers=0
     wrong_answers=0
-    over=len(questions)
+    number_of_questions=len(questions)
 
     #Choisir le mode de cotation
     while True:
@@ -150,8 +150,8 @@ def QCM(questions: list):
             except ValueError:
                 print("S'il vous plait choisiser une des lettre afficher")
 
-    light_quoting=f"{right_answers}/{over}"
-    severe_quoting=f"{right_answers-wrong_answers}/{over}"
+    light_quoting=f"{right_answers}/{number_of_questions}"
+    severe_quoting=f"{right_answers-wrong_answers}/{number_of_questions}"
 
     if presentation_value:#Evaluation
         if quoting_value:

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd43c160-cd22-44ff-b529-804725935281" name="Changes" comment="Ajouter des commentaires">
+    <list default="true" id="bd43c160-cd22-44ff-b529-804725935281" name="Changes" comment="Ajouter feedback">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project_1_2/LibrairieLectureFichierQCM/QCM_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project_1_2/LibrairieLectureFichierQCM/QCM_main.py" afterDir="false" />
     </list>
@@ -27,6 +27,7 @@
         <option value="Berre47 &lt;alexander.home@student.uclouvain.be&gt;" />
       </list>
     </option>
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -35,12 +36,12 @@
     &quot;assignee&quot;: &quot;Berre477&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Berre477/Project_1_.git&quot;,
-    &quot;accountId&quot;: &quot;765b0228-b17b-4641-8707-f99fe4b6e600&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Berre477/Project_1_.git",
+    "accountId": "bd3ea980-a4df-4130-bb23-af83b44dbcc5"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -68,6 +69,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -144,7 +146,13 @@
       <workItem from="1760536980761" duration="9005000" />
       <workItem from="1760624903233" duration="855000" />
       <workItem from="1760628195811" duration="3451000" />
-      <workItem from="1760689765733" duration="1790000" />
+      <workItem from="1760689765733" duration="1982000" />
+      <workItem from="1760707634586" duration="2138000" />
+      <workItem from="1760735454956" duration="637000" />
+      <workItem from="1760786425029" duration="9000" />
+      <workItem from="1760965809063" duration="3359000" />
+      <workItem from="1760970012976" duration="980000" />
+      <workItem from="1761036053481" duration="896000" />
     </task>
     <task id="LOCAL-00001" summary="Added some extra features">
       <option name="closed" value="true" />
@@ -226,7 +234,39 @@
       <option name="project" value="LOCAL" />
       <updated>1760559744248</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Ajouter des fonctions en plus">
+      <option name="closed" value="true" />
+      <created>1760707458521</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1760707458521</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Ajouter des fonctions en plus">
+      <option name="closed" value="true" />
+      <created>1760707533694</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1760707533694</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Ajouter plus de commentaires plus des fonctions en plus">
+      <option name="closed" value="true" />
+      <created>1760707660670</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1760707660670</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Ajouter feedback">
+      <option name="closed" value="true" />
+      <created>1760970154994</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1760970154994</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,12 +289,16 @@
     <MESSAGE value="QCM marche il faut just le commenter et le clean" />
     <MESSAGE value="QCM finit aucun beug restant ,il faut plus que ajouter les commentaires" />
     <MESSAGE value="Ajouter des commentaires" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajouter des commentaires" />
+    <MESSAGE value="Ajouter des fonctions en plus" />
+    <MESSAGE value="Merge remote-tracking branch 'QCM/main'&#10;&#10;# Conflicts:&#10;#&#9;Project_1_2/LibrairieLectureFichierQCM/QCM_main.py" />
+    <MESSAGE value="Ajouter plus de commentaires plus des fonctions en plus" />
+    <MESSAGE value="Ajouter feedback" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajouter feedback" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Project_1_$exemple.coverage" NAME="exemple Coverage Results" MODIFIED="1760509759479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project_1_2/LibrairieLectureFichierQCM" />
     <SUITE FILE_PATH="coverage/Project_1_$prng_final.coverage" NAME="prng_final Coverage Results" MODIFIED="1759751613040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project_1_2" />
     <SUITE FILE_PATH="coverage/Project_1_$PRNG_test.coverage" NAME="PRNG_test Coverage Results" MODIFIED="1760094185212" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project_1_2" />
-    <SUITE FILE_PATH="coverage/Project_1_$QCM_main.coverage" NAME="QCM_main Coverage Results" MODIFIED="1760707436151" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project_1_2/LibrairieLectureFichierQCM" />
+    <SUITE FILE_PATH="coverage/Project_1_$QCM_main.coverage" NAME="QCM_main Coverage Results" MODIFIED="1760973446320" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project_1_2/LibrairieLectureFichierQCM" />
   </component>
 </project>
