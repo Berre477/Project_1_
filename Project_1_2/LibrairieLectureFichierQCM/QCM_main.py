@@ -9,9 +9,6 @@ def add_questions_together(q1,q2):
           q2 est une liste contenant plusieurs autre liste avec question , bool et feedback
 
     post : retourne une nouvelle listes contenant les éléments de q1 et q2
-
-
-
     """
     return q1+q2
 
@@ -96,20 +93,20 @@ def QCM(questions: list):
         tried=True
         while tried:
             try:
-                letters=[]
+
                 print(f"Q:{question[0]}")  # imprime la question
                 #Affiche les options de réponse
                 for y in range(len(random_answers)):
                     answer_in_dict[y]=random_answers[y][1:]#Ajoute un nombre(index) + bool
                     i=str(y).translate(translate_number_to_letter)#Transforme un nombre en sa lettre adjacent
                     print(f"{i} : {random_answers[y][0]}")
-                    letters.append(i)
+                    
 
                 answer = input(f"answer : ").upper()
                 answer =list(answer)
                 #Enlever les choses inutiles dans answer
                 for t in answer:
-                    if t in[' ',"," ]:
+                    if t in[' ',",","/" ]:
                         answer.remove(t)
 
                 answer_to_number=[]
